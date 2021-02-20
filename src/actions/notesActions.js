@@ -16,7 +16,7 @@ export const startGetNotes = () => {
       })
       .then((response) => {
         const notes = response.data;
-        console.log(notes);
+        //console.log(notes);
         dispatch(getNotes(notes));
       })
       .catch((error) => {

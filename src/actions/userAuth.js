@@ -31,8 +31,8 @@ export const startLoginUser = (formData, handleRedirect) => {
       .then((reponse) => {
         const result = reponse.data;
         if (result.hasOwnProperty("errors")) {
-          console.log(result.errors);
-          swal(result.errors.toUpperCase());
+          //console.log(result.errors);
+          swal(result.errors?.toUpperCase());
         } else {
           localStorage.setItem("token", result.token);
           handleRedirect();
@@ -61,7 +61,7 @@ export const startGetUserInfo = () => {
       })
       .then((response) => {
         const user = response.data;
-        console.log(user);
+        //console.log(user);
         dispatch(getUser(user));
       })
       .catch((error) => {

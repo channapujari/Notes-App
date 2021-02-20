@@ -39,7 +39,7 @@ const Login = (props) => {
       email: values.email,
       password: values.password,
     };
-    console.log(formData);
+    //console.log(formData);
     const handleRedirect = () => {
       props.history.push("/");
       swal("Good job!", "Loggedin Successfully!", "success");

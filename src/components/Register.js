@@ -39,7 +39,7 @@ const Register = (props) => {
       email: values.email,
       password: values.password,
     };
-    console.log(formData);
+    //console.log(formData);
     const handleRedirect = () => {
       props.history.push("/login");
       swal("Good job!", "Registration Success!", "success");
