@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, Route, Switch, withRouter } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
+import PrivateRoute from "./PrivateRoute";
 
 import Home from "./Home";
 import Register from "./Register";
@@ -74,8 +75,8 @@ const NavBar = (props) => {
         <Route path="/" component={Home} exact={true} />
         <Route path="/register" component={Register} exact={true} />
         <Route path="/login" component={Login} exact={true} />
-        <Route path="/account" component={Account} exact={true} />
-        <Route path="/mynotes" component={MyNotes} exact={true} />
+        <PrivateRoute path="/account" component={Account} exact={true} />
+        <PrivateRoute path="/mynotes" component={MyNotes} exact={true} />
       </Switch>
     </div>
   );
